@@ -60,6 +60,5 @@ namespace Notes.Views
             await App.NotesDB.DeteleNoteAsync(note);
             await Shell.Current.GoToAsync("..");
         }
-
     }
 }
