@@ -43,7 +43,7 @@ namespace Notes.Views
         private async void OnSaveButton_Clicked(object sender, EventArgs e)
         {
             Note note = (Note)BindingContext;
-            note.Date = DateTime.UtcNow;
+            note.Date = DateTime.Now;
 
             if (!string.IsNullOrWhiteSpace(note.Text))
             {

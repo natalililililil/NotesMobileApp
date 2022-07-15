@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Notes.Views.NotesPage">
+             x:Class="Notes.Views.NotesPage"
+             Title="Notes" 
+             BackgroundColor="#ECEFF1">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
@@ -17,7 +19,7 @@
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
                                 <Setter Property="BackgroundColor"
-                                        Value="LightCyan"/>
+                                        Value="#E0F7FA"/>
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -27,26 +29,33 @@
     </ContentPage.Resources>
 
     <CollectionView x:Name="collectionView"
-                    Margin="20"
+                    Margin="5"
                     SelectionMode="Single"
                     SelectionChanged="OnSelectionChanged">
         <CollectionView.ItemsLayout>
             <LinearItemsLayout Orientation="Vertical"
-                               ItemSpacing="10" />
+                               ItemSpacing="5" />
 
         </CollectionView.ItemsLayout>
 
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
-                    <Label Text="{Binding Text}"
-                           FontSize="Medium" 
-                           TextColor="Black"/>
-                    <Label Text="{Binding Date}"
-                           TextColor="Silver"
-                           FontSize="Small" />
+                    <Frame HasShadow="True"
+                           CornerRadius="10"
+                           Margin="8,8,8,8">
+                        <StackLayout>
+                            <Label Text="{Binding Text}"
+                                   FontSize="Medium" 
+                                   TextColor="#263238"/>
 
-                    <Line HeightRequest="1" BackgroundColor="LightGray"/>
+                            <Label Text="{Binding Date}"
+                                   TextColor="Silver"
+                                   FontSize="Small" />
+
+                            <!--<Line HeightRequest="1" BackgroundColor="LightGray"/>-->
+                        </StackLayout>
+                    </Frame>
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>

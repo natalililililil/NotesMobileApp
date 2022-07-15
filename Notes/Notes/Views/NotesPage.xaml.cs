@@ -14,7 +14,7 @@ namespace Notes.Views
     {
         public NotesPage()
         {
-            Device.SetFlags(new string[] {"Shapes_Experimental"});
+            //Device.SetFlags(new string[] {"Shapes_Experimental"});
 
             InitializeComponent();
         }

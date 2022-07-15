@@ -20,11 +20,13 @@ namespace Notes.Data
 
         public Task<List<Note>> GetNotesAsync()
         {
+            // получения списка с записями
             return db.Table<Note>().ToListAsync();
         }
 
         public Task<Note> GetNotesAsync(int id)
         {
+            // получение конкретной записки
             return db.Table<Note>()
                 .Where(i => i.Id == id)
                 .FirstOrDefaultAsync();
