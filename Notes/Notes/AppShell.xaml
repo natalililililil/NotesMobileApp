@@ -2,10 +2,13 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.AppShell"
-       xmlns:views="clr-namespace:Notes.Views">
+       xmlns:views="clr-namespace:Notes.Views"
+       Shell.TabBarBackgroundColor="#ECEFF1"
+       Shell.TabBarTitleColor="#0097A7"
+       BackgroundColor="#00ACC1">
 
     <TabBar>
-        <ShellContent
+        <ShellContent        
             Title="Notes"
             Icon="icon_feed.png"
             ContentTemplate="{DataTemplate views:NotesPage}">

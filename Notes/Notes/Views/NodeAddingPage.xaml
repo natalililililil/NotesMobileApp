@@ -1,22 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Notes.Views.NodeAddingPage">
+             x:Class="Notes.Views.NodeAddingPage"
+             Title="Note editor"
+             BackgroundColor="#ECEFF1">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="icon_done2.png"                    
+                     Clicked="OnSaveButton_Clicked"/>
+        <ToolbarItem IconImageSource="icon_delete2.png"                    
+                     Clicked="OnDeleteButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Margin="20">
                 <Editor Placeholder="Note text"
                         Text="{Binding Text}"
-                        HeightRequest="100" />
+                        HeightRequest="1000"/>
 
-                <Grid ColumnDefinitions="*,*">
+                <!--<Grid ColumnDefinitions="*,*">
                     <Button Text="Save"
                             Clicked="OnSaveButton_Clicked"/>
 
                     <Button Grid.Column="1" 
                             Text="Delete"
                             Clicked="OnDeleteButton_Clicked"/>
-                </Grid>
+                </Grid>-->              
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
