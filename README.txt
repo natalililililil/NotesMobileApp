@@ -1,1 +1,1 @@
-При помощи данного приложения можно добавить/удалить какие-либо заметки 
+It's simple notepad. In this application you can add/delete any notes.
